@@ -1,0 +1,11 @@
+<!-- tags.component.html -->
+<div class="tags-container">
+    @for (tag of tags; track tag.text; let i = $index) {
+    <div class="tag" [class]="tag.className">
+        @if (tag.iconSrc) {
+        <img [src]="tag.iconSrc" [alt]="tag.text + ' icon'" class="tag-icon">
+        }
+        <span class="tag-text">{{ tag.text }}</span>
+    </div>
+    }
+</div>

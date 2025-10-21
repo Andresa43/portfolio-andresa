@@ -1,0 +1,47 @@
+.poetry_container {
+    max-width: 1180px;
+    margin: 8rem auto 0;
+    padding: 0 1.25rem;
+}
+
+.poetry_title {
+    font-family: var(--font-family-DM-Sans);
+    color: var(--text-color);
+
+    margin-bottom: 0.7rem;
+
+    span:nth-child(1) {
+        background: linear-gradient(90deg, #ccbcb4 0%, #9a7f6f 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    span:nth-child(2) {
+        background: linear-gradient(90deg, #9a7f6f 0%, #392014 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    span:nth-child(3) {
+        background: linear-gradient(90deg, #ccbcb4 0%, #392014 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
+.poetry_description {
+    font-family: var(--font-family-DM-Sans);
+    color: var(--text-color-acizentado);
+    font-size: 1.125rem;
+
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .poetry_container {
+        padding: 0;
+    }
+}

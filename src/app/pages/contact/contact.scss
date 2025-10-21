@@ -1,0 +1,84 @@
+@mixin font-familiy {
+    font-family: var(--font-family-DM-Sans);
+}
+
+.contact {
+    max-width: 1180px;
+    margin: 6rem auto 0;
+    padding: 0 1.25rem
+}
+
+.contact_title {
+    @include font-familiy();
+    font-size: 2rem;
+    color: var(--text-color);
+
+    margin-bottom: 1.5rem
+}
+
+.contact_text {
+    @include font-familiy();
+    font-size: 1rem;
+    color: var(--text-color-acizentado);
+
+}
+
+
+.contact_email {
+
+    margin-top: 1.5rem;
+    margin-bottom: 6rem;
+
+    a {
+        color: var(--text-color);
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        border-bottom-color: var(--text-color);
+
+        @include font-familiy();
+        font-size: clamp(1rem, 4vw + 0.5rem, 1.8rem);
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+}
+
+.contact_icons {
+    gap: clamp(10px, 3vw, 15px);
+    margin-top: 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    a {
+        width: clamp(1.5rem, 4vw, 2rem);
+        height: auto;
+    }
+
+    img {
+        width: 1.5rem;
+        height: 1.5rem;
+        max-width: 100%;
+
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media (min-width: 992px){
+    .contact{
+        margin-top: 15rem;
+    }
+
+    .contact_title{
+        font-size: 3rem;
+    }
+
+    .contact_text{
+        font-size: 1.5rem;
+    }
+}

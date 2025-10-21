@@ -1,0 +1,39 @@
+<header>
+    <nav class="navbar">
+        <div class="topnav">
+            <!-- Logo -->
+            <a class="logo" routerLink="/">Andresa <span>Fernandes</span></a>
+
+            <!-- Menu Hamburguer (Mobile) -->
+            <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Links de Navegação -->
+            <div class="links" [class.active]="isMenuOpen">
+                <ul class="nav-list">
+                    <li><a routerLink="/">Home</a></li>
+                    <li><a href="#about">Portfólio</a></li>
+                    <li><a routerLink="/sobre">Sobre mim</a></li>
+                    <li><a routerLink="/downloads">Downloads</a></li>
+                </ul>
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/andresa-fernandes-9271ba1ba/" target="_blank">
+                        <img src="/assets/icons/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/Andresa43" target="_blank">
+                        <img src="/assets/icons/github.png" alt="GitHub">
+                    </a>
+                    <a href="https://youtube.com/@andresafernandes7585" target="_blank">
+                        <img src="/assets/icons/youtube.png" alt="YouTube">
+                    </a>
+                </div>
+
+                <a routerLink="/contato" class="contact-btn">Entrar em contato</a>
+            </div>
+        </div>
+    </nav>
+</header>

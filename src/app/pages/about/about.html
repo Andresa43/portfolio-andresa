@@ -1,0 +1,106 @@
+<!-- about-me.component.html -->
+<div class="container_main">
+    <section class="about-me">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="assets/images/perfil_sobre.JPG" alt="Liza - UI/UX Designer" class="profile-img">
+            </div>
+
+            <div class="about-text">
+                <div class="text-header">
+                    <h1 class="name">Olá, sou Andresa<span class="emoji">👋🏽</span></h1>
+                    <p class="tagline">Do código à experiência: crio a interface digital do seu projeto.</p>
+
+                    <div class="certifications">
+                        <span class="certification-tag">BA in Design</span>
+                        <span class="certification-tag">Certified by Google & Harvard Business School Online</span>
+                    </div>
+                </div>
+
+                <div class="bio">
+                    <p>With 10+ years in UI/UX design, I specialize in end-to-end flows for complex SaaS products across
+                        AI,
+                        Web3, FinTech, AdTech, MarTech, and Trading domains. I create user-centric interfaces that
+                        balance
+                        business strategy with seamless user experience.</p>
+
+                    <p>What drives me? A product mindset. I thrive on taking ideas from concept to launch, testing
+                        assumptions, and seeing how users respond. My background in graphic design gave me an eye for
+                        detail, but my passion lies in solving complex problems through research, data, and iteration. I
+                        approach each project as an owner, not just a designer, always asking: "Will this actually work
+                        in
+                        the market?"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- about.component.html -->
+    <section class="photo-grid-section">
+        <div class="section-header">
+            <h2 class="section-title">{{ sectionTitle }}</h2>
+            <p class="section-subtitle">{{ sectionSubtitle }}</p>
+            <a routerLink="/poesias" class="section-poesia">Já deu uma olhada nas minhas poesias?</a>
+        </div>
+
+        <div class="grid-container">
+            @for (photo of gridPhotos; track photo.imageUrl; let i = $index) {
+            <div class="grid-item" [style.animation-delay]="(i * 0.1) + 's'">
+                <div class="photo-wrapper">
+                    <img [src]="photo.imageUrl" [alt]="photo.title" class="grid-photo" loading="lazy"
+                        (error)="handleImageError($event)"> <!-- Adicionei tratamento de erro -->
+
+                    <!-- Overlay com gradiente -->
+                    <div class="photo-overlay" [style.background]="photo.gradient">
+                        <div class="content-wrapper">
+                            @if (photo.category) {
+                            <span class="photo-category">{{ photo.category }}</span>
+                            }
+                            <h3 class="photo-title">{{ photo.title }}</h3>
+                            <p class="photo-description">{{ photo.description }}</p>
+
+                            <!-- Linha decorativa -->
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </section>
+
+    <section class="my-skills">
+        <div class="skill_header">
+            <h1 class="skill_title">Principais Habilidades</h1>
+            <p class="skill_description">Habilidades e ferramentas que tenho confiança em trabalhar.</p>
+            <div class="skills_btn_container">
+                <a href="\assets\downloads\Currículo - Andresa Fernandes Borges.docx"
+                    download="curriculo-AndresaFernandesBorges" class="skills_btn">Baixar currículo</a>
+
+            </div>
+        </div>
+        <div>
+            <h3 class="title_skill">Habilidades técnicas:</h3>
+            <app-tag [tags]="technicalSkills" [size]="'small'"></app-tag>
+        </div>
+
+        <div>
+            <h3 class="title_skill">Estruturas e habilidades de UX:</h3>
+            <app-tag [tags]="ux" [size]="'small'"></app-tag>
+        </div>
+
+        <div>
+            <h3 class="title_skill">Habilidades profissionais:</h3>
+            <app-tag [tags]="personalSkill" [size]="'small'"></app-tag>
+        </div>
+    </section>
+    <section class="professional-experience">
+        <h2 class="title_experience">Experiência Profissional</h2>
+        <p class="experience_description">Ao longo da minha carreira tive a oportunidade de trabalhar com profissionais talentosos em empresas excelentes.</p>
+
+        @for (experience of experiences; track experience.company) {
+        <app-experience [experience]="experience"></app-experience>
+        }
+    </section>
+</div>

@@ -1,0 +1,40 @@
+<main class="pai">
+    <!-- <div class="profile-image">
+        <img src="\assets\images\perfil.JPG" alt="Andresa Fernandes">
+    </div> -->
+
+    <div class="profile-image">
+        <img src="\assets\images\perfil_2.JPG" alt="Andresa Fernandes">
+    </div>
+    <div class="container">
+        <div>
+            <h1 class="title">Olá, sou Desa <br> Dev front-end</h1>
+            <p class="text">Gosto de desenvolver ideias, criar e melhorar o que já existe. <br>
+                Em termos simples, eu dou vida a ideias
+                <span class="rotating-text">{{ currentPhrase }}</span> <br>
+                que geram lucro e melhoram os negócios.
+            </p>
+            <a routerLink="/contato" class="contact-btn">Quero conversar</a>
+        </div>
+        <img class="container_image" src="\assets\images\mexendonocomputador.png" alt="" srcset="">
+    </div>
+
+
+
+    <h2 class="sub_title">Projetos de Portfólio</h2>
+    <div class="cards-container">
+        <!-- MarkTech Card -->
+        <app-project-card [productData]="markTechData" [imageHeight]="'300px'" cardWidth="100%"
+            theme="light"></app-project-card>
+
+        <!-- Aztech Card -->
+        <app-project-card [productData]="aztechData" [imageHeight]="'300px'" cardWidth="100%"
+            theme="dark"></app-project-card>
+
+        <app-project-card [productData]="markTechData" [imageHeight]="'300px'" cardWidth="100%"
+            theme="light"></app-project-card>
+
+        <app-project-card [productData]="markTechData" [imageHeight]="'300px'" cardWidth="100%"
+            theme="light"></app-project-card>
+    </div>
+</main>

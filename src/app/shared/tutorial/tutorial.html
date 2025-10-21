@@ -1,0 +1,50 @@
+<!-- tutorial.component.html -->
+<article class="tutorial-card">
+    <div class="tutorial-header">
+        <h3 class="tutorial-title">{{ tutorial.title }}</h3>
+        <p class="tutorial-description">{{ tutorial.description }}</p>
+    </div>
+
+    <div class="tutorial-content">
+        <!-- Imagem do tutorial -->
+        <!-- @if (tutorial.imageUrl) {
+        <div class="tutorial-image">
+            <img [src]="tutorial.imageUrl" [alt]="tutorial.imageAlt || tutorial.title" class="tutorial-img">
+        </div>
+        } -->
+
+        <!-- Lista de features -->
+        <ul class="features-list">
+            @for (feature of tutorial.features; track feature.text; let i = $index) {
+            <li class="feature-item" [class.checked]="feature.checked">
+                @if (feature.checked) {
+                <span class="check-icon">✓</span>
+                } @else {
+                <span class="check-icon">☐</span>
+                }
+                <span class="feature-text">{{ feature.text }}</span>
+                @if (feature.count) {
+                <span class="feature-count">{{ feature.count }}+</span>
+                }
+            </li>
+            }
+        </ul>
+    </div>
+
+    <!-- Rodapé com stats e botões -->
+    <div class="tutorial-footer">
+        <div class="tutorial-actions">
+            @if (tutorial.accessLink) {
+            <a [href]="tutorial.accessLink" target="_blank" class="btn btn-access" rel="noopener noreferrer">
+                🔗 Acessar
+            </a>
+            }
+
+            @if (tutorial.downloadLink) {
+            <a [href]="tutorial.downloadLink" class="btn btn-download" download>
+                ⬇️ Baixar
+            </a>
+            }
+        </div>
+    </div>
+</article>

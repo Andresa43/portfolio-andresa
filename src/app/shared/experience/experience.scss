@@ -1,0 +1,164 @@
+@mixin font-familiy {
+    font-family: var(--font-family-DM-Sans);
+}
+
+// experience.component.scss - MOBILE FIRST
+.experience {
+    background: var(--text-color-white);
+    border: 2px solid var(--background-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.experience-header {
+    margin-bottom: 1rem;
+
+    .experience-title {
+        margin-bottom: 0.5rem;
+
+        .job-title {
+            font-size: 1.6rem;
+            @include font-familiy();
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .company {
+            font-size: 1rem;
+            color: var(--text-color);
+            font-weight: 500;
+            @include font-familiy();
+
+        }
+    }
+
+    .experience-period {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+
+        .period,
+        .duration,
+        .location {
+            font-size: 0.875rem;
+            color: var(--text-color-acizentado);
+            @include font-familiy();
+        }
+
+        .location {
+            font-style: italic;
+        }
+    }
+}
+
+.experience-tags {
+    margin-bottom: 1.5rem;
+}
+
+.experience-description {
+    .company-description {
+        color: var(--text-color-acizentado);
+        line-height: 1.6;
+        margin-bottom: 0.8rem;
+        @include font-familiy();
+
+    }
+
+    .achievements {
+        list-style: none;
+        @include font-familiy();
+
+        .achievement {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+            color: var(--text-color);
+
+            &::before {
+                content: '•';
+                position: absolute;
+                left: 0;
+                top: -5px;
+                color: var(--text-color-acizentado);
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.experience-footer {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--background-color);
+
+    .related-project {
+        h4 {
+            font-size: 0.875rem;
+            @include font-familiy();
+            font-weight: 700;
+            color: var(--text-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .project-link {
+            display: block;
+            font-weight: 600;
+            color: var(--text-color-acizentado);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            @include font-familiy();
+
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .project-description {
+            font-size: 0.875rem;
+            color: var(--text-color);
+            line-height: 1.5;
+            margin: 0;
+            @include font-familiy();
+
+        }
+    }
+}
+
+// ============ DESKTOP ============
+@media (min-width: 768px) {
+    .experience {
+        padding: 2rem;
+    }
+
+    .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .experience-title {
+            margin-bottom: 0;
+            flex: 1;
+        }
+
+        .experience-period {
+            text-align: right;
+            align-items: flex-end;
+        }
+    }
+
+    .job-title {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,20 @@
+.tutorials-container {
+    max-width: 1180px;
+    margin: 12rem auto;
+    padding: 0 1.125rem;
+
+    display: grid;
+    grid-template-columns: 1fr; // 1 coluna no mobile
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr); // 2 colunas a partir de tablet
+        gap: 2rem;
+    }
+
+    // ============ DESKTOP ============
+    @media (min-width: 1024px) {
+        gap: 2.5rem;
+    }
+
+}

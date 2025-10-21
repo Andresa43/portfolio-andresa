@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+$laranja-acinzentado: #ccbcb4;
+$laranja-acinzentado-pastel: #9a7f6f;
+$vermelho: #c82917;
+$marrom-escuro: #392014;
+$laranja-apagado: #ca815b;
+$branco: #FFFFFF;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Tema Claro 
+:root {
+    color-scheme: light dark;
+    --text-color: #{$marrom-escuro};
+    --text-color-acizentado: #{$laranja-acinzentado-pastel};
+    --vermelho: #{$vermelho};
+    --text-color-laranja-acizentado: #{$laranja-acinzentado};
+    --text-color-white: #{$branco};
+    --background-color: #{$laranja-apagado};
+    --font-family-DM-Sans: "DM Sans", sans-serif;
+
+}
+
+//Tema Escuro
+:root.dark-theme {}
+
+@mixin centralizar {
+    margin: 0 auto;
+}

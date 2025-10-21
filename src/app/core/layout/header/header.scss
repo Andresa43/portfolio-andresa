@@ -1,0 +1,233 @@
+// ===== ESTILOS BASE (MOBILE FIRST) =====
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(40px);
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 1000;
+
+}
+
+.topnav {
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    min-height: 70px;
+}
+
+.logo {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-family-DM-Sans);
+    text-decoration: none;
+
+    span {
+        color: var(--text-color-acizentado);
+        font-weight: normal;
+    }
+}
+
+// ===== HAMBURGUER (MOBILE) =====
+.hamburger {
+    display: flex;
+    flex-direction: column;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    width: 30px;
+    height: 24px;
+
+    position: relative;
+    z-index: 1001;
+
+    .bar {
+        height: 3px;
+        width: 100%;
+
+        background-color: var(--text-color);
+        display: block;
+        border-radius: 5px;
+
+        transition: all 0.3s ease;
+
+        margin: 2px 0;
+    }
+
+    // Animação quando active (X)
+    &.active {
+        .bar:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .bar:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+    }
+}
+
+// ===== MENU MOBILE =====
+.links {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    backdrop-filter: blur(40px);
+    background-color: rgba(255, 255, 255, 0.95);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+    opacity: 0;
+    z-index: 1000;
+
+    transition: all 0.2s ease-in-out;
+
+    // 🔥 SOLUÇÃO: Esconder completamente quando não ativo
+    display: none; 
+
+    // Conteúdo do menu mobile
+    .nav-list {
+        list-style: none;
+
+        li {
+            a {
+                display: block;
+
+                text-align: center;
+                padding: 1.5rem 0;
+
+                color: var(--text-color);
+                text-decoration: none;
+
+                font-weight: 500;
+                font-family: var(--font-family-DM-Sans);
+
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: var(--text-color-acizentado);
+                }
+            }
+        }
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 1rem;
+        padding: 1.5rem 0;
+        justify-content: center;
+
+        a {
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+
+    .contact-btn {
+        background-color: var(--background-color);
+        border: none;
+        border-radius: 30px;
+        color: var(--text-color);
+
+        font-family: var(--font-family-DM-Sans);
+        font-weight: 500;
+
+        padding: 1rem;
+
+        text-align: center;
+        text-decoration: none;
+
+        display: block;
+
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+
+        &:hover {
+            color: var(--text-color-white);
+        }
+    }
+
+    // Menu aberto no mobile
+    &.active {
+        opacity: 1;
+        padding-bottom: 3rem;
+        display: flex;
+    }
+}
+
+// ===== TABLETS (992px+) =====
+@media (min-width: 992px) {
+    .topnav {
+        justify-content: space-evenly;
+    }
+
+    // Esconde o hamburguer
+    .hamburger {
+        display: none;
+    }
+
+    // Menu desktop
+    .links {
+        position: static;
+
+        flex-direction: row;
+
+        width: auto;
+
+        opacity: 1;
+        overflow: visible;
+        background-color: initial;
+        backdrop-filter: none;
+
+        gap: 2rem;
+        transition: none;
+
+        display: flex;
+
+
+
+        .nav-list {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .social-icons {
+            padding: 0;
+            gap: 0.8rem;
+
+            img {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
+
+        // Remove efeitos do mobile
+        &.active {
+            box-shadow: none;
+            max-height: none;
+            padding-bottom: 0;
+        }
+    }
+}

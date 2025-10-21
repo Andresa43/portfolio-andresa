@@ -1,0 +1,466 @@
+@mixin font-familiy {
+    font-family: var(--font-family-DM-Sans);
+}
+
+// about-me.component.scss - MOBILE FIRST
+
+.container_main {
+    max-width: 1180px;
+    margin: 10rem auto 0;
+    padding: 0 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.about-me {
+    // padding: 0 1rem;
+
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-image {
+    flex-shrink: 0;
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%; // Redonda no mobile
+        object-fit: cover;
+        object-position: center top;
+        border: 3px solid var(--background-color);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.about-text {
+    text-align: center;
+    max-width: 800px;
+}
+
+.text-header {
+    margin-bottom: 1.5rem;
+}
+
+.name {
+    font-size: 2rem;
+    @include font-familiy();
+    color: var(--text-color);
+    font-weight: 700;
+    // margin-bottom: 0.5rem;
+    line-height: 1.2;
+
+    .emoji {
+        font-style: normal;
+    }
+}
+
+.tagline {
+    font-size: 1.7rem;
+    color: var(--text-color-acizentado);
+    @include font-familiy();
+    font-weight: 400;
+    margin-bottom: 1rem;
+    // line-height: 1.4;
+}
+
+.certifications {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.certification-tag {
+    background: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    border: 1px solid #e9ecef;
+    color: #495057;
+}
+
+.bio {
+    text-align: left;
+
+    p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        color: var(--text-color-acizentado);
+        @include font-familiy();
+        font-size: 1.125rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// ============ DESKTOP ============
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .about-image {
+        .profile-img {
+            width: 100%;
+            height: 400px;
+            border-radius: 1rem; // Retangular no desktop
+        }
+    }
+
+    .about-text {
+        text-align: left;
+        flex: 1;
+    }
+
+    .certifications {
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 2.7rem;
+    }
+}
+
+
+// --------------------------photo grid-------------------------------
+.photo-grid-section {
+    // padding: 1rem 1.25rem;
+}
+
+.section-header {
+    text-align: start;
+    margin-bottom: 40px;
+
+    .section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-color);
+        @include font-familiy();
+    }
+
+    .section-subtitle {
+        font-size: 1.125rem;
+        @include font-familiy();
+        color: var(--text-color-acizentado);
+
+        margin-bottom: 0.5rem;
+    }
+
+    .section-poesia{
+        font-size: 1rem;
+        @include font-familiy();
+        color: var(--text-color);
+
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 280px);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.grid-item {
+    animation: slideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--text-color-acizentado)
+    }
+
+    // Animações em sequência para mobile
+    &:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    &:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    &:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+}
+
+.photo-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    filter: brightness(0.85);
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.7) 60%,
+            transparent 100%);
+    color: white;
+    padding: 24px 20px 20px;
+    z-index: 2;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.photo-category {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--text-color-laranja-acizentado), var(--text-color), var(--background-color));
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 10px;
+    @include font-familiy();
+}
+
+.photo-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    line-height: 1.2;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    @include font-familiy();
+
+}
+
+.photo-description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    opacity: 0.9;
+    @include font-familiy();
+
+}
+
+.divider {
+    width: 35px;
+    height: 2px;
+    background: linear-gradient(135deg, var(--text-color-laranja-acizentado), var(--text-color), var(--background-color));
+    margin: 12px 0 0;
+}
+
+// Animações
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 280px);
+    }
+}
+
+// ----------------------- skills ----------------------------------
+.my-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+}
+
+.professional-experience{
+    margin-bottom: 3rem;
+}
+
+.skill_title,
+.title_experience {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    @include font-familiy();
+}
+
+.skill_description,
+.experience_description {
+    @include font-familiy();
+    color: var(--text-color-acizentado);
+    font-size: 1.125rem;
+}
+
+.skills_btn_container {
+    margin-top: 2rem;
+}
+
+.skills_btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9rem;
+    background: transparent;
+    border: 1px solid var(--text-color-acizentado);
+    border-radius: 0.6rem;
+    color: var(--text-color);
+    @include font-familiy();
+    text-decoration: none;
+}
+
+.title_skill {
+    @include font-familiy();
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+// ============ TABLET ============
+@media (min-width: 992px) {
+
+    .container_main {
+        gap: 8rem;
+    }
+
+    .section-header {
+        margin-bottom: 4rem;
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.6rem;
+
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            max-width: 500px;
+        }
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 400px;
+
+        // Ajustar bordas para layout de tablet
+        .grid-item {
+            height: 400px;
+
+            &:nth-child(-n+3) {
+                border-bottom: 1px solid var(--background-color)
+            }
+
+            &:not(:nth-child(3n)) {
+                border-right: 1px solid var(--background-color)
+            }
+
+            &:nth-child(4) {
+                border-right: 1px solid var(--background-color)
+            }
+
+
+        }
+    }
+
+    .photo-overlay {
+        padding: 28px 24px 24px;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .photo-wrapper {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg,
+                    rgba(0, 0, 0, 0.7) 0%,
+                    transparent 50%,
+                    rgba(0, 0, 0, 0.7) 100%);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+
+    .grid-item:hover {
+        .photo-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .grid-photo {
+            transform: scale(1.05);
+            filter: brightness(1);
+        }
+    }
+
+    .photo-title {
+        font-size: 1.3rem;
+    }
+
+    .photo-description {
+        font-size: 1rem;
+    }
+
+    .divider {
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease 0.2s;
+    }
+
+    .grid-item:hover .divider {
+        transform: scaleX(1);
+    }
+
+    .skill_title,
+    .title_experience {
+        font-size: 2.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .experience_description {
+        margin-bottom: 3rem;
+    }
+
+    .skill_header {
+        margin-bottom: 3rem;
+    }
+}

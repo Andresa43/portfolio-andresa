@@ -1,0 +1,7 @@
+<div class="poetry_container">
+    <h1 class="poetry_title"> Escrever é <span>arte</span>,<span> conexão</span> e <span>pensamentos</span>.</h1>
+    <p class="poetry_description">Desde pequena escrevo. Na infância eram os diários, na escola os contos e fui crescendo escrevendo poesias até que não parei mais.</p>
+    @for (poem of poems; track poem.text) {
+    <app-poesias [poetry]="poem"></app-poesias>
+    }
+</div>

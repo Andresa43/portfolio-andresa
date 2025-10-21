@@ -1,0 +1,40 @@
+<div class="product-card" [class.dark-theme]="theme === 'dark'" [style.width]="cardWidth">
+    <!-- Imagem no topo -->
+    <div class="image-container" [style.height]="imageHeight">
+        <img [src]="productData.imageUrl" [alt]="productData.title" class="product-image" />
+    </div>
+
+    <!-- Conteúdo abaixo da imagem -->
+    <div class="content">
+        <!-- Items List -->
+        <div class="items-section">
+            @for (item of productData.items; track $index) {
+            <div class="item"><span>#</span>{{ item }}</div>
+            }
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Categoria -->
+        <p class="category">{{ productData.category }}</p>
+
+        <!-- Título -->
+        <h2 class="title">{{ productData.title }}</h2>
+
+        <!-- Descrição -->
+        <p class="description">{{ productData.description }}</p>
+
+        <!-- Highlights -->
+        <div class="highlights">
+            @for (highlight of productData.highlights; track $index) {
+            <div class="highlight-item">
+                <span class="highlight-value">{{ highlight.value }}</span>
+                <span class="highlight-label">{{ highlight.label }}</span>
+            </div>
+            }
+        </div>
+
+
+
+    </div>
+</div>

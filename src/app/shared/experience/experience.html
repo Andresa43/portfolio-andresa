@@ -1,0 +1,40 @@
+<!-- experience.component.html -->
+<article class="experience">
+    <header class="experience-header">
+        <div class="experience-title">
+            <h3 class="job-title">{{ experience.jobTitle }}</h3>
+            <span class="company">{{ experience.company }}</span>
+        </div>
+        <div class="experience-period">
+            <span class="period">{{ experience.period }}</span>
+            <span class="duration">{{ experience.duration }}</span>
+            <span class="location">{{ experience.location }}</span>
+        </div>
+    </header>
+
+    <div class="experience-tags">
+        <app-tag [tags]="experience.tags" size="small"></app-tag>
+    </div>
+
+    <div class="experience-description">
+        <p class="company-description">{{ experience.companyDescription }}</p>
+
+        <ul class="achievements">
+            @for (achievement of experience.achievements; track achievement) {
+            <li class="achievement">{{ achievement }}</li>
+            }
+        </ul>
+    </div>
+
+    @if (experience.relatedProject) {
+    <footer class="experience-footer">
+        <div class="related-project">
+            <h4>Related project:</h4>
+            <a [href]="experience.relatedProject.link" target="_blank" class="project-link" rel="noopener noreferrer">
+                {{ experience.relatedProject.title }}
+            </a>
+            <p class="project-description">{{ experience.relatedProject.description }}</p>
+        </div>
+    </footer>
+    }
+</article>

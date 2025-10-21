@@ -1,0 +1,40 @@
+<!-- poetry.component.html -->
+<article class="poetry">
+    <div class="poetry-content">
+        <!-- Texto da poesia -->
+        <div class="poetry-text">
+            <div class="poem" [innerHTML]="poetry?.text"></div>
+
+            <!-- Autor e referência -->
+            @if (poetry?.author || poetry?.reference) {
+            <div class="poetry-meta">
+                @if (poetry?.author) {
+                <span class="author">{{ poetry?.author }}</span>
+                }
+                @if (poetry?.reference) {
+                <cite class="reference">{{ poetry?.reference }}</cite>
+                }
+            </div>
+            }
+        </div>
+
+        <!-- Imagem opcional -->
+        @if (poetry?.imageUrl) {
+        <div class="poetry-image">
+            <img [src]="poetry?.imageUrl" [alt]="poetry?.imageAlt || 'Imagem representando a poesia'" class="poem-image">
+        </div>
+        }
+    </div>
+
+    <!-- Áudio opcional -->
+    @if (poetry?.audioUrl) {
+    <div class="poetry-audio">
+        <audio controls [src]="poetry?.audioUrl" class="audio-player">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        <div class="audio-info">
+            <span class="recitation">Que tal ouvir uma poesia hoje? <br> By {{ poetry?.recitedBy || 'mim' }}</span>
+        </div>
+    </div>
+    }
+</article>

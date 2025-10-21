@@ -1,0 +1,182 @@
+// tutorial.component.scss - MOBILE FIRST
+@mixin font-familiy {
+    font-family: var(--font-family-DM-Sans);
+}
+
+.tutorial-card {
+    background: var(--text-color-white);
+    border: 1px solid var(--background-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        transform: translateY(-2px);
+    }
+}
+
+.tutorial-header {
+    margin-bottom: 1.5rem;
+
+    .tutorial-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-color);
+        @include font-familiy();
+        margin: 0 0 0.5rem 0;
+        line-height: 1.3;
+    }
+
+    .tutorial-description {
+        color: var(--text-color-acizentado);
+        @include font-familiy();
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin: 0;
+    }
+}
+
+.tutorial-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+// .tutorial-image {
+//     text-align: center;
+
+//     .tutorial-img {
+//         max-width: 100%;
+//         height: auto;
+//         border-radius: 0.5rem;
+//         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+//     }
+// }
+
+.features-list {
+    list-style: none;
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--background-color);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &.checked {
+            .feature-text {
+                color: var(--text-color-acizentado);
+                @include font-familiy()
+            }
+        }
+
+        .check-icon {
+            color: #28a745;
+            font-weight: bold;
+            min-width: 16px;
+        }
+
+        .feature-text {
+            flex: 1;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .feature-count {
+            background: #e9ecef;
+            color: #495057;
+            padding: 0.2rem 0.5rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    }
+}
+
+.tutorial-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-top: 1px solid #e9ecef;
+    padding-top: 1rem;
+}
+
+.tutorial-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        @include font-familiy();
+
+
+        &.btn-access {
+            background: var(--background-color);
+            color: var(--text-color);
+
+            &:hover {
+                background: #0056b3;
+                transform: translateY(-1px);
+            }
+        }
+
+        &.btn-download {
+            background: var(--background-color);
+            color: var(--text-color);
+
+            &:hover {
+                background: #1e7e34;
+                transform: translateY(-1px);
+            }
+        }
+    }
+}
+
+// ============ DESKTOP ============
+@media (min-width: 768px) {
+    .tutorial-card {
+        padding: 2rem;
+    }
+
+    .tutorial-content {
+        flex-direction: row;
+        align-items: flex-start;
+
+        // .tutorial-image {
+        //     flex: 1;
+        //     max-width: 200px;
+        // }
+
+        .features-list {
+            flex: 2;
+        }
+    }
+
+    .tutorial-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .tutorial-stats {
+    //     gap: 2rem;
+    // }
+}
