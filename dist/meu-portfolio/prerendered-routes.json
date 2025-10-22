@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/": {},
+    "/contato": {},
+    "/downloads": {},
+    "/poesias": {},
+    "/sobre": {}
+  }
+}
