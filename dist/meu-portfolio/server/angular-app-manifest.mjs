@@ -2,39 +2,39 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: '/',
+  baseHref: '/portfolio-andresa/',
   locale: undefined,
   routes: [
   {
     "renderMode": 2,
-    "route": "/"
+    "route": "/portfolio-andresa"
   },
   {
     "renderMode": 2,
-    "route": "/contato"
+    "route": "/portfolio-andresa/contato"
   },
   {
     "renderMode": 2,
-    "route": "/sobre"
+    "route": "/portfolio-andresa/sobre"
   },
   {
     "renderMode": 2,
-    "route": "/poesias"
+    "route": "/portfolio-andresa/poesias"
   },
   {
     "renderMode": 2,
-    "route": "/downloads"
+    "route": "/portfolio-andresa/downloads"
   }
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 2538, hash: '1fea412c6a5847c517a2544a1b120eae44b5283bbd0a92c8b1ab4904c876c54d', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 2642, hash: '77e9476e6e4ecd73ccdb9d7599a6301c56ff21eb70389cabeab5a206cbe0b06b', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'contato/index.html': {size: 14641, hash: '356cda0fdb2e6f9f1174e902bcbf08b02e8d12da06eaa1bb46fe4e82e3801222', text: () => import('./assets-chunks/contato_index_html.mjs').then(m => m.default)},
-    'poesias/index.html': {size: 21135, hash: '7268c13681497675bac9e5da0a34071ddaf0929bc5cfedc761077dfb3dd9f91a', text: () => import('./assets-chunks/poesias_index_html.mjs').then(m => m.default)},
-    'sobre/index.html': {size: 44292, hash: '605c3dce04777c78378b0997b86fcb502ee436d9a78b8ba2153849d361579e84', text: () => import('./assets-chunks/sobre_index_html.mjs').then(m => m.default)},
-    'downloads/index.html': {size: 19401, hash: '68976b2f5450d488df52930c5b5a0eb156c51ce0942fdd953107d0353c8d924e', text: () => import('./assets-chunks/downloads_index_html.mjs').then(m => m.default)},
-    'index.html': {size: 27132, hash: 'f4303d692d759d00d4078f6739ab6bde2d90ca60e5a7faf2d9ef6c087d54df1f', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 2556, hash: '1ecd44bdd08295c04c972407daf2997aea2bd73abe5a0381ade61ce68f28ed22', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 2660, hash: '3c55501d4c5196f48c54e4a6c4d0480e40a394c0bbf755b3bffc7f332da424ad', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'contato/index.html': {size: 14749, hash: '08e990a347790b3782e4595198d2cd5f640c4aff892d7978a7e3a716a4f6d01c', text: () => import('./assets-chunks/contato_index_html.mjs').then(m => m.default)},
+    'sobre/index.html': {size: 44418, hash: '5933e8e8bd75180e60896149c0fd6fc8de10728fbc3bd1a45b0989af0e05801c', text: () => import('./assets-chunks/sobre_index_html.mjs').then(m => m.default)},
+    'index.html': {size: 27258, hash: '434b3675c2ce19178fba1ca1e50af0c2492756918072cde1df9fd19523325365', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'downloads/index.html': {size: 19509, hash: 'e674551ef8dbcdafd655fb286c6e4911f77b47c93a088607f623e624b7b2c13e', text: () => import('./assets-chunks/downloads_index_html.mjs').then(m => m.default)},
+    'poesias/index.html': {size: 21243, hash: '94f660609f96fbf011fa2fad74245e2e0b16a03cbfcc57884954b9e937483922', text: () => import('./assets-chunks/poesias_index_html.mjs').then(m => m.default)},
     'styles-I3OUDI4E.css': {size: 291, hash: 'C3dwZYj9YXY', text: () => import('./assets-chunks/styles-I3OUDI4E_css.mjs').then(m => m.default)}
   },
 };

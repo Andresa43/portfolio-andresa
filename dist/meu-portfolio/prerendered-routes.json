@@ -1,9 +1,9 @@
 {
   "routes": {
-    "/": {},
-    "/contato": {},
-    "/downloads": {},
-    "/poesias": {},
-    "/sobre": {}
+    "/portfolio-andresa": {},
+    "/portfolio-andresa/contato": {},
+    "/portfolio-andresa/downloads": {},
+    "/portfolio-andresa/poesias": {},
+    "/portfolio-andresa/sobre": {}
   }
 }
