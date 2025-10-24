@@ -17,7 +17,7 @@ export class PoetryCanvas {
       author: 'Andresa F Borges',
       reference: 'BORGES, A. F. Poesia Livre. Inferno. Salvador: Lapa, 2024.',
       imageUrl: 'assets/images/inferno.jpg',
-      audioUrl: '/assets/audios/testeaudio.waptt.mp3',
+      audioUrl: 'assets/audios/testeaudio.waptt.mp3',
       recitedBy: 'Andresa'
     },
     {
@@ -32,7 +32,7 @@ export class PoetryCanvas {
       author: 'Andresa F Borges',
       reference: 'BORGES, A. F. Poesia Livre. Eu. Salvador: 2024.',
       imageUrl: 'assets/images/espelho.jpg',
-      audioUrl: '/assets/audios/testeaudio.waptt.mp3',
+      audioUrl: 'assets/audios/testeaudio.waptt.mp3',
       recitedBy: 'Andresa'
     },
     {

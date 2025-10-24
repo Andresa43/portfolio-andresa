@@ -45,7 +45,7 @@ export class Info implements OnInit, OnDestroy {
   }
 
   markTechData: ProductCardData = {
-    imageUrl: '/assets/images/imagegenerica.jpg', // Caminho da imagem
+    imageUrl: 'assets/images/imagegenerica.jpg', // Caminho da imagem
     category: 'AI-powered SaaS',
     title: 'MarkTech',
     description: 'AI-powered marketing analytics for enterprise teams. Turns campaign data into real-time decisions & personalized content — at scale.',
@@ -57,7 +57,7 @@ export class Info implements OnInit, OnDestroy {
   };
 
   aztechData: ProductCardData = {
-    imageUrl: '/assets/images/imagegenerica.jpg', // Caminho da imagem
+    imageUrl: 'assets/images/imagegenerica.jpg', // Caminho da imagem
     category: 'Cycle / Web 3',
     title: 'Aztech',
     description: 'Web3 data-sharing platform for brand engagement. Gives users data ownership and brands richer insights — at scale.',
