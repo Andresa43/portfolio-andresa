@@ -79,12 +79,16 @@
 }
 
 .certification-tag {
-    background: #f8f9fa;
+    background: var(--text-color-white);
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     font-size: 0.875rem;
-    border: 1px solid #e9ecef;
-    color: #495057;
+    border: 1px solid var(--text-color-laranja-acizentado);
+    color: var(--text-color-acizentado);
+    @include font-familiy();
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .bio {
@@ -101,6 +105,10 @@
             margin-bottom: 0;
         }
     }
+
+    .text_bold {
+        color: var(--text-color);
+    }
 }
 
 // ============ DESKTOP ============
@@ -114,7 +122,7 @@
     .about-image {
         .profile-img {
             width: 100%;
-            height: 400px;
+            height: 450px;
             border-radius: 1rem; // Retangular no desktop
         }
     }
@@ -164,7 +172,7 @@
         margin-bottom: 0.5rem;
     }
 
-    .section-poesia{
+    .section-poesia {
         font-size: 1rem;
         @include font-familiy();
         color: var(--text-color);
@@ -303,7 +311,7 @@
     gap: 2rem
 }
 
-.professional-experience{
+.professional-experience {
     margin-bottom: 3rem;
 }
 
@@ -320,6 +328,11 @@
     @include font-familiy();
     color: var(--text-color-acizentado);
     font-size: 1.125rem;
+}
+
+.experience_description{
+    margin-bottom: 2.5rem;
+
 }
 
 .skills_btn_container {

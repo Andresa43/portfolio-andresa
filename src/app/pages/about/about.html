@@ -3,7 +3,9 @@
     <section class="about-me">
         <div class="about-content">
             <div class="about-image">
-                <img src="assets/images/perfil_sobre.JPG" alt="mulher negra com cabelo de trança, blusa bege e calça vermelha olhando para frente com uma postura profissional" class="profile-img">
+                <img src="assets/images/perfil_sobre.JPG"
+                    alt="mulher negra com cabelo de trança, blusa bege e calça vermelha olhando para frente com uma postura profissional"
+                    class="profile-img">
             </div>
 
             <div class="about-text">
@@ -12,24 +14,29 @@
                     <p class="tagline">Do código à experiência: crio a interface digital do seu projeto.</p>
 
                     <div class="certifications">
-                        <span class="certification-tag">BA in Design</span>
-                        <span class="certification-tag">Certified by Google & Harvard Business School Online</span>
+                        <!-- <span class="certification-tag">BA in Design</span> -->
+
+                        <span class="certification-tag">
+                            <img src="assets\images\diploma.png" alt="">
+                            BI em Ciência de Tecnologia na UFBA
+                        </span>
                     </div>
                 </div>
 
                 <div class="bio">
-                    <p>With 10+ years in UI/UX design, I specialize in end-to-end flows for complex SaaS products across
-                        AI,
-                        Web3, FinTech, AdTech, MarTech, and Trading domains. I create user-centric interfaces that
-                        balance
-                        business strategy with seamless user experience.</p>
-
-                    <p>What drives me? A product mindset. I thrive on taking ideas from concept to launch, testing
-                        assumptions, and seeing how users respond. My background in graphic design gave me an eye for
-                        detail, but my passion lies in solving complex problems through research, data, and iteration. I
-                        approach each project as an owner, not just a designer, always asking: "Will this actually work
-                        in
-                        the market?"</p>
+                    <p>Minha paixão por desenvolvimento front-end vai além do código: está no entendimento do usuário
+                        final. <b class="text_bold">Desde 2020</b>, venho moldando minha carreira para criar interfaces
+                        que não apenas funcionem,
+                        mas que sejam verdadeiramente <b class="text_bold">compreensíveis, usáveis e acessíveis para
+                            todos</b>.</p>
+                    <p>
+                        Para construir essa trajetória, participei de bootcamps especializados <b
+                            class="text_bold">(SENAI, Cubos Academy,
+                            Rocketseat, Alura e Programaria)</b> e atualmente curso <b class="text_bold">BI em Ciência e
+                            Tecnologia na UFBA</b>,
+                        aprofundando minha visão
+                        interdisciplinar sobre tecnologia e sociedade.
+                    </p>
                 </div>
             </div>
         </div>
@@ -97,7 +104,8 @@
     </section>
     <section class="professional-experience">
         <h2 class="title_experience">Experiência Profissional</h2>
-        <p class="experience_description">Ao longo da minha carreira tive a oportunidade de trabalhar com profissionais talentosos em empresas excelentes.</p>
+        <p class="experience_description">Ao longo da minha carreira tive a oportunidade de trabalhar com profissionais
+            talentosos em empresas excelentes.</p>
 
         @for (experience of experiences; track experience.company) {
         <app-experience [experience]="experience"></app-experience>

@@ -17,7 +17,7 @@ export interface GridPhoto {
     Tag,
     Experience,
     RouterLink
-],
+  ],
   templateUrl: './about.html',
   styleUrl: './about.scss'
 })
@@ -166,58 +166,58 @@ export class About {
 
   experiences: ExperienceData[] = [
     {
-      jobTitle: 'Head of Product Design',
-      company: 'Profila 💹',
-      period: 'Feb 2022 - Nov 2023',
-      duration: '1 yr 10 mos',
-      location: 'Switzerland-based project (Remote)',
+      jobTitle: 'Analista Front-End',
+      company: 'Grupo Terra Firme 🌎',
+      period: 'Jun 2023 - o momento',
+      duration: '2 a 6 m',
+      location: 'Salvador, Bahia, Brasil (Presencial)',
       tags: [
-        { text: 'Web3', className: 'primary' },
-        { text: 'Crypto', className: 'primary' },
-        { text: 'NFT', className: 'primary' },
-        { text: 'Web-platform', className: 'primary' },
-        { text: 'FinTech', className: 'primary' }
+        { text: 'Angular', className: 'primary' },
+        { text: 'Typescript', className: 'primary' },
+        { text: 'CSS BEM', className: 'primary' },
+        { text: 'Acessibilidade', className: 'primary' },
+        { text: 'Figma', className: 'primary' },
+        { text: 'Usabilidade', className: 'primary' }
+
       ],
-      companyDescription: 'A Cardano Web 3.0 Switzerland-based unicorn startup transforming brand-consumer interactions and secure data sharing across B2C and C2B platforms, backed by over $2 million in funding.',
+      companyDescription: 'Na ACB Processamento de Dados, atuo como analista front-end, desenvolvendo interfaces com Angular, TypeScript, HTML, CSS BEM, Javascript, Bootstrap e padrão MVC para sistemas internos e sites institucionais.',
       achievements: [
-        'Designed and launched a responsive platform from scratch, conducting pre-launch testing to identify and prioritize issues using a data-driven approach.',
-        'Led the design team and established structured design processes to enhance collaboration between the design team and C-level management.',
-        'Reduced estimated churn rate by up to 60% and minimized financial losses through qualitative feedback analysis before launch for core features, including communication between brands and individuals, and gamification.',
-        'Built UX information architecture for B2C, C2B, and Admin platforms, enhancing usability and navigation.',
-        'Developed a design system in a short timeframe, optimizing the design process.'
+        'Desenvolvimento completo: criação do site Grupo Terra Firme do zero até o deploy, utilizando Angular e CSS BEM, além de recursos SEO.',
+        'Otimização e Conclusão: atuei na finalização dos sites ASTEBA e ASSEBA com HTML, CSS, JavaScript e Bootstrap',
+        'Prototipagem e UX: construção de interfaces no Figma para validação de usabilidade antes da implementação.',
+        'Manutenção e Evolução: melhoria contínua de sistemas internos com criação de novas funcionalidades.'
       ],
       relatedProject: {
-        title: 'Swiss crypto-startup Profile:',
-        description: 'Web 3.0 on Cardano. Secure data sharing, brand interaction, and NFTs.',
-        link: 'https://example.com/project'
+        title: 'Site Institucional',
+        description: 'do zero ao deploy: trabalhei na construção do site institucional com tecnologias atuais.',
+        link: 'https://grupoterrafirme.com.br/'
       }
     },
-        {
-      jobTitle: 'Head of Product develop',
-      company: 'Profila 💹',
-      period: 'Feb 2022 - Nov 2023',
-      duration: '1 yr 10 mos',
-      location: 'Switzerland-based project (Remote)',
+    {
+      jobTitle: 'Freelancer',
+      company: 'Pronto para transformar a presença digital do seu negócio?',
+      period: 'Abr de 2024 - o momento',
+      duration: '1 a',
+      location: 'Salvador, Bahia, Brasil (Remoto)',
       tags: [
-        { text: 'Web3', className: 'primary' },
-        { text: 'Crypto', className: 'primary' },
-        { text: 'NFT', className: 'primary' },
-        { text: 'Web-platform', className: 'primary' },
-        { text: 'FinTech', className: 'primary' }
+        { text: 'Wordpress', className: 'primary' },
+        { text: 'IA', className: 'primary' },
+        { text: 'Canva', className: 'primary' },
+        { text: 'Capcut', className: 'primary' },
+        { text: 'Criatividade', className: 'primary' },
+        { text: 'E muito mais...', className: 'primary' }
+
       ],
-      companyDescription: 'A Cardano Web 3.0 Switzerland-based unicorn startup transforming brand-consumer interactions and secure data sharing across B2C and C2B platforms, backed by over $2 million in funding.',
+      companyDescription: 'Minha jornada profissional começou cedo (acho que sempre fui freela rs), com trabalhos como panfleteira, vendedora de brigadeiros e ambulante. Hoje, atuo como desenvolvedora front-end, sempre com foco no usuário final, criando interfaces intuitivas e fortalecendo marcas pessoais.',
       achievements: [
-        'Designed and launched a responsive platform from scratch, conducting pre-launch testing to identify and prioritize issues using a data-driven approach.',
-        'Led the design team and established structured design processes to enhance collaboration between the design team and C-level management.',
-        'Reduced estimated churn rate by up to 60% and minimized financial losses through qualitative feedback analysis before launch for core features, including communication between brands and individuals, and gamification.',
-        'Built UX information architecture for B2C, C2B, and Admin platforms, enhancing usability and navigation.',
-        'Developed a design system in a short timeframe, optimizing the design process.'
+        'Minha atuação combina tecnologia, inteligência artificial e criatividade para impulsionar resultados e fortalecer a presença digital do seu negócio.',
+        'Ao longo da minha trajetória, colaborei com marcas e projetos de destaque, como Cáren Cruz | Pittaco Consultoria, FLICA - Festa Literária Internacional de Cachoeira, Escola de Ativismo, Amba e Tocaia, entregando soluções que unem inovação e impacto.',
       ],
-      relatedProject: {
-        title: 'Swiss crypto-startup Profile:',
-        description: 'Web 3.0 on Cardano. Secure data sharing, brand interaction, and NFTs.',
-        link: 'https://example.com/project'
-      }
+      // relatedProject: {
+      //   title: 'Swiss crypto-startup Profile:',
+      //   description: 'Web 3.0 on Cardano. Secure data sharing, brand interaction, and NFTs.',
+      //   link: 'https://example.com/project'
+      // }
     },
     // Adicione mais experiências aqui se quiser
   ];
