@@ -13,29 +13,28 @@ export class Downloads {
   // No seu component
   tutorials: TutorialInterface[] = [
     {
-      title: 'Typing in Figma prototype',
-      description: 'Prioritize your MVP features like a PRO. Balance UX desirability with development feasibility.',
+      title: 'Como converter imagens WebP pelo terminal',
+      description: 'O WebP é um formato de imagem moderno que oferece compressão superior (até 30% menor que JPEG/PNG) sem perda significativa de qualidade.',
       // imageUrl: 'assets/images/webp.webp',
       features: [
-        { text: 'Upper & lowercase letters', checked: true },
-        { text: 'Symbols', checked: true },
-        { text: 'Numbers', checked: true },
+        { text: 'Reduz tempo de carregamento.', checked: true },
+        { text: 'Mantem a qualidade.', checked: true },
+        { text: 'Menos espaço armazenado.', checked: true },
       ],
-      accessLink: 'https://figma.com/community/file/123',
-      downloadLink: 'assets/templates/typing-figma.fig',
+      accessLink: 'https://docs.google.com/document/d/1Br-MkJqvhyB8QNRcLH3AJH4bsj01Ds8YwhJtWfZpO-o/edit?usp=sharing',
+      downloadLink: 'assets/downloads/Tutorial_ Como criar imagens WebP com a linha de comando.pdf',
       price: 'Free'
     },
     {
-      title: 'Impact-effort matrix',
-      description: 'Prioritize your MVP features like a PRO. Balance UX desirability with development feasibility.',
+      title: 'Trabalhando com diferentes versões do Angular e Node.js',
+      description: 'Principal objetivo: ter versões diferentes do angular e node.js na sua máquina.',
       // imageUrl: 'assets/images/imagegenerica.jpg',
       features: [
-        { text: '3+ Matrix variations', checked: true },
-        { text: '100+ Downloads', checked: true },
-        { text: 'Customizable framework', checked: true }
+        { text: 'Diferentes versões do Angular', checked: true },
+        { text: 'Diferentes versões do Node.js', checked: true },
       ],
-      accessLink: 'https://figma.com/community/file/456',
-      downloadLink: 'assets/templates/impact-matrix.fig',
+      accessLink: 'https://docs.google.com/document/d/1_u-jigh3Aqwrs30j6vx0pqkDG3uKZsxQ/edit?usp=sharing&ouid=107873131700078925051&rtpof=true&sd=true',
+      downloadLink: 'assets/downloads/Tutorial NVM e Angular.pdf',
       price: 'Free'
     }
   ];

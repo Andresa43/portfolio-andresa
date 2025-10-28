@@ -1,5 +1,8 @@
-<div class="tutorials-container">
-    @for (tutorial of tutorials; track tutorial.title) {
-    <app-tutorial [tutorial]="tutorial"></app-tutorial>
-    }
+<div class="tutorials-pai">
+    <h1>Aqui você encontra <span>tutoriais</span> para ajudar <span>desenvolvedores</span> em seus fluxos de trabalho.</h1>
+    <div class="tutorials-container">
+        @for (tutorial of tutorials; track tutorial.title) {
+        <app-tutorial [tutorial]="tutorial"></app-tutorial>
+        }
+    </div>
 </div>

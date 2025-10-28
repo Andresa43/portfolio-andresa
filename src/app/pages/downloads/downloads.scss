@@ -1,20 +1,46 @@
-.tutorials-container {
+.tutorials-pai {
     max-width: 1180px;
-    margin: 12rem auto;
+    margin: 8rem auto;
     padding: 0 1.125rem;
 
-    display: grid;
-    grid-template-columns: 1fr; // 1 coluna no mobile
-    gap: 1.5rem;
+    h1 {
+        font-family: var(--font-family-DM-Sans);
+        font-size: 2rem;
+        color: var(--text-color-acizentado);
+        margin-bottom: 2rem;
 
-    @media (min-width: 768px) {
-        grid-template-columns: repeat(2, 1fr); // 2 colunas a partir de tablet
-        gap: 2rem;
+        span {
+            color: var(--text-color);
+        }
     }
 
-    // ============ DESKTOP ============
-    @media (min-width: 1024px) {
+    .tutorials-container {
+        display: grid;
+        grid-template-columns: 1fr; // 1 coluna no mobile
+        gap: 1.5rem;
+    }
+
+}
+
+// ============ DESKTOP ============
+@media (min-width: 1024px) {
+    .tutorials-container {
         gap: 2.5rem;
     }
 
+}
+
+@media (min-width: 768px) {
+    .tutorials-pai {
+        margin-top: 10rem;
+
+        .tutorials-container {
+            grid-template-columns: repeat(2, 1fr); // 2 colunas a partir de tablet
+            gap: 2rem;
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
 }

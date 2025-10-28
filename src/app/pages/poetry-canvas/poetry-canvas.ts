@@ -35,9 +35,8 @@ export class PoetryCanvas {
       audioUrl: 'assets/audios/testeaudio.waptt.mp3',
       recitedBy: 'Andresa'
     },
-    {
-      text: `Minha poesia sem imagem<br>mas com muita emoção<br>e quebras de linha<br>para dar ritmo.`,
-      // Sem imagem, sem áudio - apenas texto
-    }
+    // {
+    //   text: `Minha poesia sem imagem<br>mas com muita emoção<br>e quebras de linha<br>para dar ritmo.`,
+    // }
   ];
 }
