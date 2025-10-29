@@ -44,28 +44,52 @@ export class Info implements OnInit, OnDestroy {
     }, 1000);
   }
 
-  markTechData: ProductCardData = {
-    imageUrl: 'assets/images/imagegenerica.jpg', // Caminho da imagem
-    category: 'AI-powered SaaS',
-    title: 'MarkTech',
-    description: 'AI-powered marketing analytics for enterprise teams. Turns campaign data into real-time decisions & personalized content — at scale.',
+  memoteca: ProductCardData = {
+    imageUrl: 'assets/images/memoteca.png', // Caminho da imagem
+    category: 'Angular',
+    title: 'Memoteca',
+    description: 'Sua biblioteca digital de inspiração. Armazene trechos de música, citações de livros, pensamentos e ideias em uma interface intuitiva desenvolvida em Angular 14.',
     highlights: [
-      { value: '$332M', label: 'exit' },
-      { value: '+37%', label: 'user satisfaction' }
+      // { value: '', label: '' },
     ],
-    items: ['Data Analytics', 'Network Analytics', 'Performance Tracking', 'ROI Optimization']
+    items: ['Angular14', 'CRUD', 'TypeScript', 'HTML', 'CSS', 'JavaScript'],
+    projectLink: 'https://github.com/Andresa43/memoteca'
   };
 
-  aztechData: ProductCardData = {
-    imageUrl: 'assets/images/imagegenerica.jpg', // Caminho da imagem
-    category: 'Cycle / Web 3',
-    title: 'Aztech',
-    description: 'Web3 data-sharing platform for brand engagement. Gives users data ownership and brands richer insights — at scale.',
+  sorveteria: ProductCardData = {
+    imageUrl: 'assets/images/sorveteria.png', // Caminho da imagem
+    category: 'Estilo',
+    title: 'Exposição de Doces',
+    description: 'Catálogo digital responsivo para confeitarias. Apresenta produtos de forma visualmente atraente e organizada, adaptando-se a qualquer dispositivo.',
     highlights: [
-      { value: '2M+', label: 'raised funds' },
-      { value: '3', label: 'integrated parties' }
+      // { value: '', label: '' },
     ],
-    items: ['Data Ownership', 'Brand Insights', 'Web3 Integration', 'User Rewards']
+    items: ['GRID & Flexbox', 'HTML', 'CSS', 'Git & Github', 'Responsividade'],
+    projectLink: 'https://codepen.io/andresafernandes/pen/WNYRbJN'
   };
+
+  dicionario: ProductCardData = {
+    imageUrl: 'assets/images/dicionario-mulheres.png', // Caminho da imagem
+    category: 'Javascript',
+    title: 'Dicionário de Mulheres Negras',
+    description: 'Plataforma educativa que celebra e preserva o legado de mulheres negras na história do Brasil e do mundo. Um tributo digital àquelas que fizeram e ainda fazem a diferença.',
+    highlights: [
+      // { value: '', label: '' },
+    ],
+    items: ['DOM Manipulation', 'HTML', 'CSS', 'Git & Github', 'Responsividade'],
+    projectLink: 'https://andresa43.github.io/dicionario-mulheres-negras/'
+  };
+
+  // aztechData: ProductCardData = {
+  //   imageUrl: 'assets/images/imagegenerica.jpg',
+  //   category: 'Cycle / Web 3',
+  //   title: 'Aztech',
+  //   description: 'Web3 data-sharing platform for brand engagement. Gives users data ownership and brands richer insights — at scale.',
+  //   highlights: [
+  //     { value: '2M+', label: 'raised funds' },
+  //     { value: '3', label: 'integrated parties' }
+  //   ],
+  //   items: ['Data Ownership', 'Brand Insights', 'Web3 Integration', 'User Rewards']
+  // };
 
 }

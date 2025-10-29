@@ -1,7 +1,16 @@
+<!-- project-card.html - VERIFIQUE SE TEM ESTE CÓDIGO -->
 <div class="product-card" [class.dark-theme]="theme === 'dark'" [style.width]="cardWidth">
-    <!-- Imagem no topo -->
+    <!-- Imagem no topo com overlay -->
     <div class="image-container" [style.height]="imageHeight">
         <img [src]="productData.imageUrl" [alt]="productData.title" class="product-image" />
+        
+        <!-- ⚠️ ESTE É O OVERLAY QUE FALTAVA -->
+        <div class="image-overlay">
+            <button class="view-project-btn" (click)="viewProject()">
+                <span class="btn-icon">👁️</span>
+                Ver Projeto
+            </button>
+        </div>
     </div>
 
     <!-- Conteúdo abaixo da imagem -->
@@ -33,8 +42,5 @@
             </div>
             }
         </div>
-
-
-
     </div>
 </div>
