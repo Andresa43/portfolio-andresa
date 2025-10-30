@@ -98,7 +98,7 @@
     transition: all 0.2s ease-in-out;
 
     // 🔥 SOLUÇÃO: Esconder completamente quando não ativo
-    display: none; 
+    display: none;
 
     // Conteúdo do menu mobile
     .nav-list {
@@ -121,6 +121,11 @@
 
                 &:hover {
                     color: var(--text-color-acizentado);
+                }
+
+                &.active {
+                    color: var(--text-color-acizentado) !important;
+                    font-weight: 600;
                 }
             }
         }
