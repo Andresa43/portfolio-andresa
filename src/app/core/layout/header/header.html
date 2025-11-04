@@ -2,7 +2,7 @@
     <nav class="navbar">
         <div class="topnav">
             <!-- Logo -->
-            <a class="logo" routerLink="/">Andresa <span>Fernandes</span></a>
+            <a class="logo" routerLink="/" (click)="closeMenu()">Andresa <span>Fernandes</span></a>
 
             <!-- Menu Hamburguer (Mobile) -->
             <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
@@ -14,11 +14,12 @@
             <!-- Links de Navegação -->
             <div class="links" [class.active]="isMenuOpen">
                 <ul class="nav-list">
-                    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                            (click)="closeMenu()">Home</a>
                     </li>
                     <li><a href="#about">Portfólio</a></li>
-                    <li><a routerLink="/sobre" routerLinkActive="active">Sobre mim</a></li>
-                    <li><a routerLink="/downloads" routerLinkActive="active">Downloads</a></li>
+                    <li><a routerLink="/sobre" routerLinkActive="active" (click)="closeMenu()">Sobre mim</a></li>
+                    <li><a routerLink="/downloads" routerLinkActive="active" (click)="closeMenu()">Downloads</a></li>
                 </ul>
 
                 <div class="social-icons">
@@ -33,7 +34,7 @@
                     </a>
                 </div>
 
-                <a routerLink="/contato" class="contact-btn">Entrar em contato</a>
+                <a routerLink="/contato" class="contact-btn" (click)="closeMenu()">Entrar em contato</a>
             </div>
         </div>
     </nav>
