@@ -36,6 +36,18 @@ export class Downloads {
       accessLink: 'https://docs.google.com/document/d/1_u-jigh3Aqwrs30j6vx0pqkDG3uKZsxQ/edit?usp=sharing&ouid=107873131700078925051&rtpof=true&sd=true',
       downloadLink: 'assets/downloads/Tutorial NVM e Angular.pdf',
       price: 'Free'
+    },
+    {
+      title: 'Tutorial Completo: Como Publicar Projeto Angular no GitHub Pages',
+      description: 'Principal objetivo: ter o seu site publicado/hospedado no GitHub',
+      // imageUrl: 'assets/images/imagegenerica.jpg',
+      features: [
+        { text: 'Deploy', checked: true },
+        { text: 'angular-cli-ghpages', checked: true },
+      ],
+      accessLink: 'https://docs.google.com/document/d/1FdaOo5pNN9aKpOIScdr1DqNnz3VTRZ-eBgZbYbEdC58/edit?usp=sharing',
+      downloadLink: 'assets/downloads/Tutorial Completo_ Como Publicar Projeto Angular no GitHub Pages.pdf',
+      price: 'Free'
     }
   ];
 }
