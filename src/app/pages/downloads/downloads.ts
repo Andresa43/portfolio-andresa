@@ -38,7 +38,7 @@ export class Downloads {
       price: 'Free'
     },
     {
-      title: 'Tutorial Completo: como publicar projeto angular no GitHub Pages',
+      title: 'Como publicar projeto angular no GitHub Pages',
       description: 'Principal objetivo: ter o seu site publicado/hospedado no GitHub',
       // imageUrl: 'assets/images/imagegenerica.jpg',
       features: [
