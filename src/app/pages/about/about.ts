@@ -189,7 +189,7 @@ export class About {
       ],
       relatedProject: {
         title: 'Site empresarial',
-        description: 'do zero ao deploy: trabalhei na construção do site institucional com tecnologias atuais.',
+        description: 'do zero ao deploy: trabalhei na construção do site empresarial com tecnologias atuais.',
         link: 'https://grupoterrafirme.com.br/'
       }
     },
