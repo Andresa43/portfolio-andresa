@@ -188,7 +188,7 @@ export class About {
         'Manutenção e Evolução: melhoria contínua de sistemas internos com criação de novas funcionalidades.'
       ],
       relatedProject: {
-        title: 'Site Institucional',
+        title: 'Site empresarial',
         description: 'do zero ao deploy: trabalhei na construção do site institucional com tecnologias atuais.',
         link: 'https://grupoterrafirme.com.br/'
       }
