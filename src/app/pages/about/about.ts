@@ -180,7 +180,7 @@ export class About {
         { text: 'Usabilidade', className: 'primary' }
 
       ],
-      companyDescription: 'Na ACB Processamento de Dados, atuo como analista front-end, desenvolvendo interfaces com Angular, TypeScript, HTML, CSS BEM, Javascript, Bootstrap e padrão MVC para sistemas internos e sites institucionais.',
+      companyDescription: 'Na ACB Processamento de Dados, atuo como analista front-end, desenvolvendo interfaces com Angular, TypeScript, HTML, CSS BEM, Javascript, Bootstrap e padrão MVC para sistemas internos e sites empresariais (landing pages).',
       achievements: [
         'Desenvolvimento completo: criação do site Grupo Terra Firme do zero até o deploy, utilizando Angular e CSS BEM, além de recursos SEO.',
         'Otimização e Conclusão: atuei na finalização dos sites ASTEBA e ASSEBA com HTML, CSS, JavaScript e Bootstrap',
