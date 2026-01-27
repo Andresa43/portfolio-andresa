@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Tag, TagData } from '../../shared/tag/tag';
 import { Experience, ExperienceData } from '../../shared/experience/experience';
 import { RouterLink } from '@angular/router';
+import { Tab, Tabs, TabList, TabPanel, TabContent } from '@angular/aria/tabs';
+
 
 export interface GridPhoto {
   imageUrl: string;
@@ -16,7 +18,12 @@ export interface GridPhoto {
   imports: [
     Tag,
     Experience,
-    RouterLink
+    RouterLink,
+    TabList, 
+    Tab, 
+    Tabs, 
+    TabPanel, 
+    TabContent,
   ],
   templateUrl: './about.html',
   styleUrl: './about.scss'
