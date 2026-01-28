@@ -284,6 +284,10 @@
     margin: 12px 0 0;
 }
 
+.container_academic{
+    margin-bottom: 1.5rem;
+}
+
 // Animações
 @keyframes slideUp {
     from {
@@ -477,7 +481,8 @@
         margin-bottom: 3rem;
     }
 
-    .skill_header {
+    .skill_header,
+    .container_academic {
         margin-bottom: 3rem;
     }
 }
