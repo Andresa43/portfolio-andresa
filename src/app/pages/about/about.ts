@@ -203,7 +203,7 @@ export class About {
     {
       jobTitle: 'Freelancer',
       company: 'Pronto para transformar a presença digital do seu negócio?',
-      period: 'Abr de 2024 - o momento',
+      period: 'Abr de 2024 - Nov 2025',
       duration: '1 a',
       location: 'Salvador, Bahia, Brasil (Remoto)',
       tags: [
