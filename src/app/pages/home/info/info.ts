@@ -44,6 +44,18 @@ export class Info implements OnInit, OnDestroy {
     }, 1000);
   }
 
+  cacetufba: ProductCardData = {
+    imageUrl: 'assets/images/cacetufba.png', // Caminho da imagem
+    category: 'Angular',
+    title: 'Centro Acadêmico',
+    description: 'Site oficial da Gestão Nina Silva (2025/2026) do Centro Acadêmico de Ciência e Tecnologia (CACET) da UFBA. O site mostra informações sobre a gestão e homenageia mulheres que fizeram e fazem a diferença na história da ciência e tecnologia.',
+    highlights: [
+      // { value: '', label: '' },
+    ],
+    items: ['Angular20', 'Tailwind CSS', 'TypeScript', 'HTML',],
+    projectLink: 'https://cacetufba.github.io/gestao-nina-silva/'
+  };
+
   memoteca: ProductCardData = {
     imageUrl: 'assets/images/memoteca.png', // Caminho da imagem
     category: 'Angular',
